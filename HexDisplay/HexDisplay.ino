@@ -1,8 +1,8 @@
 // Designed for the Arduino Uno R3 and RL-D5621
 // The datasheet can be found here: http://www.led-opt.com.ua/pdf/digital/RL-D56.pdf
 
-// The chip is common anode with the anode for digit 1 on pin 10
-// and the anode for digit 2 on pin 5.
+// The chip is common anode with the anode for digit 1 on pin 14
+// and the anode for digit 2 on pin 15.
 
 // Segment  | Cathode Pin
 //    A     |     7
