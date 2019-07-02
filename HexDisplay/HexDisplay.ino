@@ -1,3 +1,31 @@
+// Designed for the Arduino Uno R3 and RL-D5621
+// The datasheet can be found here: http://www.led-opt.com.ua/pdf/digital/RL-D56.pdf
+
+// The chip is common anode with the anode for digit 1 on pin 10
+// and the anode for digit 2 on pin 5.
+
+// Segment  | Cathode Pin
+//    A     |     7
+//    B     |     6
+//    C     |     4
+//    D     |     1
+//    E     |     3
+//    F     |     8
+//    G     |     9
+//    DP    |     2
+
+// The arrangement of the LED's on the display is as follows:
+//
+//      A
+//     ---
+// F /   / B
+//   --- G
+// E /   / C
+//  ---   __
+//   D   /DP/
+//       --
+
+
 const int A_Pin = 13;
 const int B_Pin = 12;
 const int C_Pin = 11;
@@ -149,8 +177,8 @@ void outputDigit(int digit){
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
+ 
+  //outputs every number from 0 to 9 with a 1 second delay between numbers
   for (int i = 0; i < 10; i++){
     outputDigit(i);
     delay(1000);
